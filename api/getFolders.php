@@ -1,7 +1,7 @@
 <?php
+    $dir = $_GET['path'];
     require ('documentClass.php');
 
-    $dir = 'root';
     $files = getFilesFromFolder($dir)[0];
 
     function getFilesFromFolder($dir){
