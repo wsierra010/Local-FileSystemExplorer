@@ -15,9 +15,13 @@
             $files=[];
             if($getDirecoryContent){
                 $files=getFilesFromFolder($path);
+                $size = $files[1];
+                $content = $files[0];
+            }else{
+                $size = 0;
+                $content = [];
             }
-            $size = $files[1];
-            $content = $files[0];
+            
             $doc=new folder($file, 'folder', $path, $content, $size, $created, $modidied);
         }
         return $doc;
