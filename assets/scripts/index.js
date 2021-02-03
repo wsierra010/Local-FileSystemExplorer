@@ -1,8 +1,10 @@
 import { getFolders } from "./requests/getFolders.js";
+import { getFileInfo } from "./requests/getFileInfo.js";
 import { printFoldersSidebar } from "./print/printFoldersSidebar.js";
 
 $(document).ready(function(){
-    getFolders('root', printFoldersSidebar);
+    /* getFolders('root', printFoldersSidebar); */
+    getFileInfo('root/document.txt', console.log);
 
 });
 
