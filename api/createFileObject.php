@@ -18,12 +18,28 @@
                 $size = $files[1];
                 $content = $files[0];
             }else{
-                $size = 0;
+                $size = calculateSize($path);
                 $content = [];
             }
             
             $doc=new folder($file, 'folder', $path, $content, $size, $created, $modidied);
         }
         return $doc;
+    }
+
+    function calculateSize($path){
+        $path_info = pathinfo( $path );
+        $size=0;
+        if( isset( $path_info['extension'] ) ){
+            $size = filesize('../' . $path);
+        }else{
+            $rootFiles = scandir('../' . $path);
+            foreach( $rootFiles as $file ){
+                if( $file!='.' && $file!='..' ){
+                    $size += calculateSize( $path. '/' . $file);
+                }
+            }
+        }
+        return $size;
     }
 ?>
