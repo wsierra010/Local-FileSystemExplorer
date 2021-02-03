@@ -14,12 +14,16 @@
             if( $file!='.' && $file!='..' ){
                 $path = $dir . '/' . $file;
                 $path_info = pathinfo( $path );
+                $created=0;
+                $modidied = filemtime ('../' . $path);
                 if( isset( $path_info['extension'] ) ){
-                    $doc=new document($file, $path_info['extension'], $path);
+                    $size = filesize('../' . $path);
+                    $doc=new document($file, $path_info['extension'], $path, $size, $created, $modidied);
                     array_push($filesInFolder, $doc);
                 }else{
+                    $size = 0;
                     $content = getFilesFromFolder($path);
-                    $doc=new folder($file, 'folder', $path, $content);
+                    $doc=new folder($file, 'folder', $path, $content, $size, $created, $modidied);
                     array_push($filesInFolder, $doc);
                 }
             }
