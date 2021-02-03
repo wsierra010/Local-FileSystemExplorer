@@ -1,0 +1,28 @@
+.header{
+    width: auto;
+    height: 123px;
+    display: flex;
+    background-color: #CFCFCF;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.header__title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+.header__search{
+    font-family: 'Roboto', sans-serif;  
+}
+.header_search__input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+.header_search__btn{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

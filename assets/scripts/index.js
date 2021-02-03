@@ -4,7 +4,7 @@ import { printFoldersSidebar } from "./print/printFoldersSidebar.js";
 
 $(document).ready(function(){
     /* getFolders('root', printFoldersSidebar); */
-    getFileInfo('root/document.txt', console.log);
+    // getFileInfo('root/document.txt', console.log);
 
 });
 
