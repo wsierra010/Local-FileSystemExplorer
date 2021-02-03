@@ -1,18 +1,15 @@
-import { printFolders } from "../requests/getFoldersSidebar.js";
-
-export function getFoldersSidebar(){
-    $.ajax({
-        /* data:  parametros, */
-        url:   'api/getFolders.php',
-        type:  'GET',
-        beforeSend: function () {
-                $("body").html("Procesando, espere por favor...");
-        },
-        success:  function (response) {
-            $("body").html(response);
-            $("body").append('<br><br>');
-            let result= jQuery.parseJSON( response )
-            printFolders(result, null);
+export function printFolders(data, i){
+    $.each(data, function( index, value ) {
+        index++;
+        if(i!=null){
+          index= i+'.'+index; 
         }
-    });
+        $("body").append( '<br>' + index + ": " + value.name + "<br> path: " + value.path + "<br> extension: " + value.extension );
+        if(value.extension=='folder'){
+            printFolders(value.content, index)
+        }
+        else if(value.extension=='jpg'){
+            $("body").append(`<br><img src='${value.path}'>`);
+        }
+      });
 }
