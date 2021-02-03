@@ -1,7 +1,8 @@
-import { getFoldersSidebar } from "./requests/getFoldersSidebar.js";
+import { getFolders } from "./requests/getFolders.js";
+import { printFoldersSidebar } from "./print/printFoldersSidebar.js";
 
 $(document).ready(function(){
-    getFoldersSidebar();
+    getFolders('root', printFoldersSidebar);
 
 });
 
