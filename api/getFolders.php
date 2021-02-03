@@ -46,7 +46,7 @@
             }
         }
 
-        return $files;
+        return $filesInFolder;
 
     }
 
