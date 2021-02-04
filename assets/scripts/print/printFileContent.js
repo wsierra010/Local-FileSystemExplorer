@@ -1,10 +1,12 @@
+import { printFoldersSidebar } from "./printFoldersSidebar.js";
+
 export const printFileContent = (data)=>{
     console.log(data);
 
     const hola = `
-        <div class=" sidebarInfo__closeIcon">
+        <button id="closeSideInfo" class=" sidebarInfo__closeIcon">
             <i class="fas fa-times"></i>
-        </div>
+        </button>
         <div class="sidebarInfo__fileIcon">
             <i class="fas fa-file"></i>
         </div>
@@ -29,4 +31,5 @@ export const printFileContent = (data)=>{
     `;
 
     document.getElementById('sidebar').innerHTML = hola;
+    document.getElementById('sidebar').classList.add('sidebarInfo');
 }

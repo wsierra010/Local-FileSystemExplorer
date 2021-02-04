@@ -1,13 +1,22 @@
 .sidebarInfo{
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 20%;
+    background-color: #EBEBEB;
 }
 .sidebarInfo__closeIcon{
     font-size: 30px;
     color: #A5A5A5;
     display: block;
+    cursor: pointer;
+    border: none;
+    background: none;
 }
+.sidebarInfo__closeIcon:hover,
+.sidebarInfo__closeIcon:focus{
+    color: #6d6d6d;
+}
+
 .sidebarInfo__fileIcon{
     font-size: 100px;
     text-align: center;
