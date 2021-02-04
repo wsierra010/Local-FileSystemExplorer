@@ -1,15 +1,19 @@
-export function printFoldersSidebar(data, i=null){
+
+export function printFoldersSidebar(data, i=null, $nodeToPrint=$(".aside")){
     $.each(data, function( index, value ) {
         index++;
         if(i!=null){
-            index= i+'.'+index;
+            index= i+'_'+index;
         }
-        $("body").append( index + ": " + value.name + "<br> path: " + value.path + "<br> extension: " + value.extension + '<br>');
+        
+        /* $(".aside").append( index + ": " + value.name + "<br> path: " + value.path + "<br> extension: " + value.extension + '<br>'); */
         if(value.extension=='folder'){
-            printFoldersSidebar(value.content, index);
-        }
-        else if(value.extension=='jpg'){
-            $("body").append(`<br><img src='${value.path}'>`);
+            let $button=`<div id='${index}'><button class="fas fa-chevron-right aside__folder__arrow"></button><button class='aside__folder__name'><i class="far fa-folder"></i> ${value.name}</button></div>`;
+            $($nodeToPrint).append($button);
+            let $container=`<div id='div-${index}' class='aside__folder__container'></div>`
+            $($nodeToPrint).append($container);
+            printFoldersSidebar(value.content, index, $(`#div-${index}`));
         }
     });
+
 }

@@ -1,7 +1,6 @@
 <?php
-    $dir = $_GET['path'];
-    require ('documentClass.php');
     require ('createFileObject.php');
+    $dir = $_GET['path'];
 
     $files = getFilesFromFolder($dir)[0];
 

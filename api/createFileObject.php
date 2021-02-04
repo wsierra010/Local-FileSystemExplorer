@@ -19,7 +19,7 @@
                 $content = $files[0];
             }else{
                 $size = calculateSize($path);
-                $content = [];
+                $content = null;
             }
             
             $doc=new folder($file, 'folder', $path, $content, $size, $created, $modidied);
