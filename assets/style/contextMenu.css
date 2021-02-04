@@ -1,0 +1,37 @@
+.contextMenu{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    z-index: 5;
+    width:200px;
+    height: auto;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    border: 1px solid #565656;
+    
+    box-shadow: 2px 2px 5px #0007;
+    
+}
+
+.contextMenu__button{
+    
+    height: 35px;
+    font-size: 18px;
+    border:none;
+    border-top: 1px solid #565656;
+    background-color: #EBEBEB;
+    font-family: 'Lato', sans-serif;
+}
+.contextMenu__button:first-child{
+    border-radius: 5px;
+    border-top: none;
+
+}
+.contextMenu__button:last-child{
+    border-radius: 0 0 5px 5px;
+
+}
+
+.contextMenu__button:hover{
+    background-color: #CFCFCF;
+}
