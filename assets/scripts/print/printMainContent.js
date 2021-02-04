@@ -12,6 +12,7 @@ export const printMainContent = (data)=> {
         const element = document.createElement('div');
         element.classList.add('mainContent__element');
         element.dataset.url = e.path
+        element.dataset.type = e.extension
 
         // identify type
         if (e.extension === 'folder') {
