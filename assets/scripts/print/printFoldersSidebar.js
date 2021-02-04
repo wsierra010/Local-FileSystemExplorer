@@ -6,7 +6,7 @@ export function printFoldersSidebar(data, i=null, $nodeToPrint=$(".aside")){
             index= i+'_'+index;
         }
         
-        if( value.extension == ' folder ' ){
+        if( value.extension == 'folder' ){
             let $button = `
             <div id='${ index }'>
                 <button class="fas fa-chevron-right aside__folder__arrow"></button>
