@@ -4,13 +4,13 @@
 
         $path = $dir . '/' . $file;
         $path_info = pathinfo( $path );
-        $created= filectime ('../' . $path);
-        $modidied = filemtime ('../' . $path);
+            $created= filectime ('../' . $path);
+            $modified = filemtime ('../' . $path);
         $doc=null;
         $size=0;
         if( isset( $path_info['extension'] ) ){
             $size = filesize('../' . $path);
-            $doc=new document($file, $path_info['extension'], $path, $size, $created, $modidied);
+            $doc=new document($file, $path_info['extension'], $path, $size, $created, $modified);
         }else{
             $files=[];
             if($getDirecoryContent){
@@ -21,8 +21,8 @@
                 $size = calculateSize($path);
                 $content = [];
             }
-            
-            $doc=new folder($file, 'folder', $path, $content, $size, $created, $modidied);
+
+            $doc=new folder($file, 'folder', $path, $content, $size, $created, $modified);
         }
         return $doc;
     }

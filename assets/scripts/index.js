@@ -6,7 +6,6 @@ import { printMainContent } from "./print/printMainContent.js";
 $(document).ready(function(){
     getFolders('root',printMainContent);
     
-
     // printMainContent('root',printFoldersSidebar)
     // getFileInfo('root/images', console.log)
 
