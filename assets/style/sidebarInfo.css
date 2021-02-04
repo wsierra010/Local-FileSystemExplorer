@@ -1,0 +1,17 @@
+.sidebarInfo{
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+    
+}
+.sidebarInfo__closeIcon{
+    font-size: 30px;
+    color: #A5A5A5;
+    display: block;
+}
+.sidebarInfo__fileIcon{
+    font-size: 100px;
+    text-align: center;
+
+    display: block;
+}
