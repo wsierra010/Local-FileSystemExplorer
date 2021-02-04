@@ -32,8 +32,8 @@ export const mainContainerListeners = ()=>{
         getFileInfo(targetData.url, printFileContent);
         // show modal
         console.log('se va a mostrar el modal');
-       
-    }); 
+
+    });
 
 
 
