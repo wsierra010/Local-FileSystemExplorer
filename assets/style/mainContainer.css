@@ -2,4 +2,27 @@
     flex: 8;
     height: 80vh;
     height: calc(100vh - 123px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+
+    /* grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: max-content; */
+}
+.mainContent__element{
+   
+    text-align: center;
+    height: 100px;
+    min-width: 200px;
+    padding-top: 20px;
+    
+    
+}
+.mainContent_element__icon{
+    color: #A5A5A5;
+    font-size: 50px;
+}
+.mainContent_element__title{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
