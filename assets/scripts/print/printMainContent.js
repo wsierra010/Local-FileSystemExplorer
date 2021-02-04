@@ -4,6 +4,7 @@ import { getIcon } from "./getIcon.js";
 export const printMainContent = (data)=> {
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');
+    $gridContainer.innerHTML='';
     console.log(data);
     // iterate folders and files
     data.forEach(e => {

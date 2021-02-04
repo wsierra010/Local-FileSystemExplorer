@@ -10,7 +10,7 @@
 }
 .aside__folder__arrow{
     margin-top:0.5em;
-    width: 24px;
+    width: 30px;
     font-size: 24px;
     border:none;
     background-color: #0000;
@@ -26,6 +26,6 @@
 }
 .aside__folder__container{
     display:none;
-    padding-left: 24px;
+    padding-left: 30px;
     padding-top:0.2em;
 }

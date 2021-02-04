@@ -1,3 +1,5 @@
+import { printMainContent } from "../print/printMainContent.js";
+import { getFolders } from "../requests/getFolders.js";
 
 export function addSidebarListeners(){
     $( ".aside" ).on( "click", function(event) {
@@ -13,6 +15,8 @@ export function addSidebarListeners(){
         }else if($(target).hasClass('aside__folder__name')){
             
             showContent(id);
+            getFolders($(target).data('path'), [printMainContent]);
+
         }
       });
 }
@@ -26,7 +30,6 @@ function toggleShowContent(id){
 }
 
 function showContent(id){
-    console.log(id);
     let container = '#div-'+id;
     let arow = '#' + id + ' .aside__folder__arrow';
 
@@ -34,6 +37,8 @@ function showContent(id){
 
     $(arow).removeClass('fa-chevron-right');
     $(arow).addClass('fa-chevron-down');
+
+    
 }
 
 function hideContent(id){
