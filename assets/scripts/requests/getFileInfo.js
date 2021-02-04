@@ -5,8 +5,8 @@ export function getFileInfo( path, functionToPrint){
         method:  'GET',
         data: 'path=' + path,
         success:  function (response) {
-            /* let result= jQuery.parseJSON( response); */
-            $('body').html(response);
+            let result= jQuery.parseJSON( response);
+            functionToPrint(result);
         }
     });
 }
