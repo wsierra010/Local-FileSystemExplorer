@@ -3,8 +3,8 @@ import { getFileInfo } from "./requests/getFileInfo.js";
 import { printFoldersSidebar } from "./print/printFoldersSidebar.js";
 
 $(document).ready(function(){
-    /* getFolders('root', printFoldersSidebar); */
-    getFileInfo('root/images', console.log);
+    //  getFolders('root', printFoldersSidebar);
+    //  getFileInfo('root/hola', console.log);
 
 });
 
