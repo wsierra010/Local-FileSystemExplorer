@@ -27,9 +27,12 @@ export const mainContainerListeners = ()=>{
 
     // add event listener single click
     $mainContent.addEventListener( 'click' , ( event ) => {
+        
         const targetData = event.target.parentNode.dataset;
-        // show modal
-        console.log( 'se va a mostrar el modal' );
+        if (event.target.parentNode.dataset.url) {          
+            getFileInfo( targetData.url , printFileContent )
+        }  
+        
     
     });
 
