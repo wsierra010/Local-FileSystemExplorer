@@ -2,6 +2,7 @@ import { printMainContent } from "../print/printMainContent.js";
 import { getFolders } from "../requests/getFolders.js";
 import { addContextMenuListeners } from "../listeners/contextMenulisteners.js";
 import { printContextMenu, removeContextMenuIfExist } from "../print/printContextMenu.js";
+import { mainPathListeners } from "./mainPathListeners.js";
 
 export const mainContainerListeners = ()=>{
 
@@ -40,9 +41,13 @@ export const mainContainerListeners = ()=>{
         // show modal
         console.log( 'se va a mostrar el modal' );
 
+        mainPathListeners(event);
+
     });
 
     //add event listener right click
     $mainContent.addEventListener('contextmenu', printContextMenu, false);
+
+
 
 }
