@@ -4,6 +4,7 @@ import { getFileInfo } from "../requests/getFileInfo.js";
 import { getFolders } from "../requests/getFolders.js";
 import { addContextMenuListeners } from "../listeners/contextMenulisteners.js";
 import { printContextMenu, removeContextMenuIfExist } from "../print/printContextMenu.js";
+import { mainPathListeners } from "./mainPathListeners.js";
 
 export const mainContainerListeners = ()=>{
 
@@ -47,9 +48,13 @@ export const mainContainerListeners = ()=>{
         //remove posible context menu
         removeContextMenuIfExist();
 
+        mainPathListeners(event);
+
     });
 
     //add event listener right click
     $mainContent.addEventListener('contextmenu', printContextMenu, false);
+
+
 
 }
