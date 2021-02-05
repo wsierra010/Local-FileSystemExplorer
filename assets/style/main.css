@@ -4,6 +4,7 @@
 @import url("./mainContainer.css");
 @import url("./sidebarInfo.css");
 @import url("./contextMenu.css");
+@import url('./modal.css');
 
 /* RESET */
 html, body, div, span, applet, object, iframe,

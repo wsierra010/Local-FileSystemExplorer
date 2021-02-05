@@ -1,5 +1,6 @@
 import { back } from "../helpers/back.js";
 import { removeContextMenu } from "../print/printContextMenu.js";
+import { printCreateDirectoryModal } from "../print/printCreateDirectoryModal.js";
 
 export function addContextMenuListeners(){
 
@@ -23,9 +24,13 @@ export function addContextMenuListeners(){
 
         if( $( target ).attr( 'id' ) == 'contextMenuGoBack'){
             back.goBack();
+        }else if( $( target ).attr( 'id' ) == 'contextMenuCreateDirectory'){
+            const path = $( target ).data('path');
+            console.log(target);
+            printCreateDirectoryModal( path );
         }
 
         removeContextMenu();
-
+        
     });
 }
