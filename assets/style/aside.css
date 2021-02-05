@@ -17,6 +17,10 @@
     background-color: #0000;
     color:#565656;
 }
+.aside__folder__arrow:focus, .aside__folder__arrow:hover{
+    outline:none;
+    color:#2C2C2C;
+}
 .aside__folder__name{
     margin-top:0.5em;
     font-size: 24px;
@@ -24,6 +28,10 @@
     background-color: #0000;
     color: #2C2C2C;
     text-transform: capitalize;
+}
+
+.aside__folder__name:focus, .aside__folder__name:hover{
+    text-decoration: underline;
 }
 .aside__folder__container{
     display:none;

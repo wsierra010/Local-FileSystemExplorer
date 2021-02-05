@@ -6,7 +6,7 @@ export const printMainContent = ( data, path )=> {
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');
     $gridContainer.innerHTML = '' ;
-    $gridContainer.innerHTML = `<div class='main__root'><button class="fas fa-chevron-left main__back__arrow"></button><span>${path}/</span><div>` ;
+    $gridContainer.innerHTML = `<div class='main__root' data-path='${path}' ><button class="fas fa-chevron-left main__back__arrow"></button><span>${path}/</span><div>` ;
     // iterate folders and files
     data.forEach( e => {
 

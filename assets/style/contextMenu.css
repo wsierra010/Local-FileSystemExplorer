@@ -5,33 +5,24 @@
     z-index: 5;
     width:200px;
     height: auto;
-    background-color: #EBEBEB;
+    background-color: white;
     border-radius: 5px;
-    border: 1px solid #565656;
+    /* border: 1px solid #565656; */
     
-    box-shadow: 2px 2px 5px #0007;
+    box-shadow: 2px 2px 8px #0007;
     
 }
 
 .contextMenu__button{
-    
-    height: 35px;
+    margin: 5px 0;
+    height: 25px;
     font-size: 18px;
     border:none;
-    border-top: 1px solid #565656;
-    background-color: #EBEBEB;
+   /*  border-top: 1px solid #565656; */
+    background-color: white;
     font-family: 'Lato', sans-serif;
 }
-.contextMenu__button:first-child{
-    border-radius: 5px;
-    border-top: none;
 
-}
-.contextMenu__button:last-child{
-    border-radius: 0 0 5px 5px;
-
-}
-
-.contextMenu__button:hover{
-    background-color: #CFCFCF;
+.contextMenu__button:hover, .contextMenu__button:focus{
+    background-color: #e5e5e5;
 }
