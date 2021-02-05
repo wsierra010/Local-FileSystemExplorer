@@ -1,12 +1,7 @@
 import { createHtml } from "./createHtml.js";
 import { getIcon } from "./getIcon.js";
 
-<<<<<<< HEAD
-
-export const printMainContent = (data)=> {
-=======
 export const printMainContent = ( data, path )=> {
->>>>>>> main
 
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');

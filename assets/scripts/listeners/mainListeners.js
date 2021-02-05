@@ -29,15 +29,6 @@ export const mainContainerListeners = ()=>{
     $mainContent.addEventListener( 'click' , ( event ) => {
         const targetData = event.target.parentNode.dataset;
         // show modal
-<<<<<<< HEAD
-        getFileInfo(targetData.url, printFileContent);
-
-
-    });
-
-}
-
-=======
         console.log( 'se va a mostrar el modal' );
     
     });
@@ -67,4 +58,3 @@ export const mainContainerListeners = ()=>{
         event.preventDefault();
       }, false);
 }
->>>>>>> main
