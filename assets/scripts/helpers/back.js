@@ -4,11 +4,21 @@ import { getFolders } from "../requests/getFolders.js";
 let lastPagesArray=[];
 
 export function setLastPage(path){
-    lastPagesArray.push(path);
-    console.log(lastPagesArray);
+
+    const last = lastPagesArray[ lastPagesArray.length -1 ];
+
+    if(last != path){
+        lastPagesArray.push(path);
+    }
+
 }
 
 export function goBack(){
-    const path = lastPagesArray.pop();
-    getFolders( path, [ printMainContent ] );
+
+    if( lastPagesArray.length > 1 ){
+        lastPagesArray.pop();
+        const path = lastPagesArray[ lastPagesArray.length -1 ];
+        getFolders( path, [ printMainContent ], true );
+    }
+
 }

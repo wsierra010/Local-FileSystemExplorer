@@ -10,12 +10,10 @@ export function printMainPath(path){
     });
 
     $mainPath += `</div>` ;
-    console.log($mainPath);
     return $mainPath;
 }
 
 function createPathButton(pathArray, position){
-    console.log(pathArray)
     let folderPath = '';
     
     for(let i=0; i<=position; i++){

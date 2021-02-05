@@ -2,7 +2,6 @@ import { getIcon } from "./getIcon.js";
 import { printFoldersSidebar } from "./printFoldersSidebar.js";
 
 export const printFileContent = (data)=>{
-    console.log(data);
 
     let dateCreation = new Date(data.created*1000);
     let dateModification = new Date(data.modified*1000);
