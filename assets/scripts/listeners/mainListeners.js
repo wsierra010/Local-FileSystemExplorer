@@ -1,4 +1,6 @@
+import { printFileContent } from "../print/printFileContent.js";
 import { printMainContent } from "../print/printMainContent.js";
+import { getFileInfo } from "../requests/getFileInfo.js";
 import { getFolders } from "../requests/getFolders.js";
 import { addContextMenuListeners } from "../listeners/contextMenulisteners.js";
 import { printContextMenu, removeContextMenuIfExist } from "../print/printContextMenu.js";
@@ -33,13 +35,18 @@ export const mainContainerListeners = ()=>{
 
     // add event listener single click
     $mainContent.addEventListener( 'click' , ( event ) => {
+        
+        const targetData = event.target.dataset;
+
+        
+        if (targetData.url) {
+            console.log('aqui tb');
+            getFileInfo( targetData.url , printFileContent )
+        };
+
 
         //remove posible context menu
         removeContextMenuIfExist();
-
-        const targetData = event.target.dataset;
-        // show modal
-        console.log( 'se va a mostrar el modal' );
 
         mainPathListeners(event);
 

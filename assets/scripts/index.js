@@ -9,7 +9,6 @@ $( document ).ready( function(){
     getFolders( 'root', [ printFoldersSidebar , printMainContent ] );
     addSidebarListeners();
     mainContainerListeners();
-
 });
 
 
