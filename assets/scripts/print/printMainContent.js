@@ -1,3 +1,4 @@
+import { setLastPage } from "../helpers/back.js";
 import { createHtml } from "./createHtml.js";
 import { getIcon } from "./getIcon.js";
 import { printMainPath } from "./printMainPath.js";
@@ -29,5 +30,7 @@ export const printMainContent = ( data, path )=> {
         // append element
         $gridContainer.appendChild( element );
     });
+
+    setLastPage(path);
 
 }
