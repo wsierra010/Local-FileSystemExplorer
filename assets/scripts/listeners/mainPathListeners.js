@@ -1,4 +1,4 @@
-import { goBack } from "../helpers/back.js";
+import { back } from "../helpers/back.js";
 import { printMainContent } from "../print/printMainContent.js";
 import { getFolders } from "../requests/getFolders.js";
 
@@ -11,7 +11,7 @@ export function mainPathListeners(event){
         getFolders(path, [ printMainContent ] );
 
     }else if(target.classList.contains('main__back__arrow')){
-        goBack();
+        back.goBack();;
     }
 
 }
