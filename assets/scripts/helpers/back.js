@@ -1,24 +1,31 @@
 import { printMainContent } from "../print/printMainContent.js";
 import { getFolders } from "../requests/getFolders.js";
 
-let lastPagesArray=[];
 
-export function setLastPage(path){
+class Back{
 
-    const last = lastPagesArray[ lastPagesArray.length -1 ];
+    lastPagesArray=[];
 
-    if(last != path){
-        lastPagesArray.push(path);
+    setLastPage( path ) {
+        const last = this.getLastPage();
+        if( last != path ) {
+            this.lastPagesArray.push( path );
+        }
+    }
+
+    goBack(){
+        if( this.lastPagesArray.length > 1 ){
+            this.lastPagesArray.pop();
+            const path = this.getLastPage();
+            getFolders( path, [ printMainContent ] );
+        }
+    }
+
+    getLastPage(){
+        return this.lastPagesArray[ this.lastPagesArray.length -1 ];
     }
 
 }
 
-export function goBack(){
+export const back = new Back();
 
-    if( lastPagesArray.length > 1 ){
-        lastPagesArray.pop();
-        const path = lastPagesArray[ lastPagesArray.length -1 ];
-        getFolders( path, [ printMainContent ], true );
-    }
-
-}

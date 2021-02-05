@@ -1,4 +1,4 @@
-import { goBack } from "../helpers/back.js";
+import { back } from "../helpers/back.js";
 import { removeContextMenu } from "../print/printContextMenu.js";
 
 export function addContextMenuListeners(){
@@ -22,7 +22,7 @@ export function addContextMenuListeners(){
         const target = event.target;
 
         if( $( target ).attr( 'id' ) == 'contextMenuGoBack'){
-            goBack();
+            back.goBack();
         }
 
         removeContextMenu();
