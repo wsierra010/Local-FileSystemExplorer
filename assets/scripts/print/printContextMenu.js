@@ -38,7 +38,7 @@ function printGeneralContextMenu(event, actualFolderPath) {
     <div class='contextMenu' style=' top: ${position.y}px; left: ${position.x}px '>
         <button class='contextMenu__button data-path='${actualFolderPath}'>Add directory</button>
         <button class='contextMenu__button data-path='${actualFolderPath}'>Add file</button>
-        <button class='contextMenu__button'>Go back</button>
+        <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 
     return $contextMenu;
@@ -59,7 +59,7 @@ function printFolderContextMenu(event, actualFolderPath) {
         <button class='contextMenu__button' data-path='${filePath}'>Remove directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}'>Add directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}'>Add file</button>
-        <button class='contextMenu__button'>Go back</button>
+        <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 
     return $contextMenu;
@@ -79,7 +79,7 @@ function printFileContextMenu(event, actualFolderPath) {
         <button class='contextMenu__button' data-path='${filePath}'>Open file</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}'>Add directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}'>Add file</button>
-        <button class='contextMenu__button'>Go back</button>
+        <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 
     return $contextMenu;

@@ -1,10 +1,9 @@
-
+import { setLastPage } from "../helpers/back.js";
 import { createHtml } from "./createHtml.js";
 import { getIcon } from "./getIcon.js";
 import { printMainPath } from "./printMainPath.js";
 
 export const printMainContent = ( data, path )=> {
-
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');
     $gridContainer.innerHTML = '' ;
@@ -30,5 +29,7 @@ export const printMainContent = ( data, path )=> {
         // append element
         $gridContainer.appendChild( element );
     });
+
+    setLastPage(path);
 
 }
