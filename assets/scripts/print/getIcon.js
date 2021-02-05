@@ -10,40 +10,40 @@ export const getIcon = (extension)=>{
             icon = 'file-word'
             break;
         case 'csv':
-            icon = 'file-word'
+            icon = 'file-csv'
             break;
         case 'jpg':
-            icon = 'file-word'
+            icon = 'file-image'
             break;
         case 'txt':
-            icon = 'file-word'
+            icon = 'file-alt'
             break;
         case 'ppt':
-            icon = 'file-word'
+            icon = 'file-powerpoint'
             break;
         case 'odt':
-            icon = 'file-word'
+            icon = 'file-alt'
             break;
         case 'pdf':
-            icon = 'file-word'
+            icon = 'file-pdf'
             break;
         case 'zip':
-            icon = 'file-word'
+            icon = 'file-archive'
             break;
         case 'rar':
-            icon = 'file-word'
+            icon = 'file-archive'
             break;
         case 'exe':
-            icon = 'file-word'
+            icon = 'file-alt'
             break;
         case 'svg':
-            icon = 'file-word'
+            icon = 'file-image'
             break;
         case 'mp3':
-            icon = 'file-word'
+            icon = 'file-audio'
             break;
         case 'mp4':
-            icon = 'file-word'
+            icon = 'file-video'
             break;
     }
 
