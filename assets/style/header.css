@@ -6,23 +6,31 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    box-shadow: 2px 2px 5px #0006;
 }
 .header__title{
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 36px;
+    color: #2C2C2C;
 }
-.header__search{
-    font-family: 'Roboto', sans-serif;  
-}
+
 .header_search__input{
     border: none;
     border-radius: 5px;
-    padding: 5px 5px;
+    padding: 0 1em;
+    color: #2C2C2C;
+    height: 40px;
+    box-shadow: inset 2px 2px 5px #0006;
+    font-size: 20px;
 }
 .header_search__btn{
-    background-color: green;
+    background-color: #328444;
     color: white;
     border: none;
-    padding: 5px 10px;
     border-radius: 5px;
+    height: 38px;
+    padding: 0 2em;
+    font-size: 18px;
+    box-shadow: 2px 2px 5px #0006;
+
 }

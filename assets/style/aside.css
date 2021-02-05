@@ -7,6 +7,7 @@
     padding-left: 50px;
     height: calc(100vh - 123px);
     background-color: #EBEBEB;
+    box-shadow: 2px 2px 5px #0006;
 }
 .aside__folder__arrow{
     margin-top:0.5em;
@@ -21,7 +22,7 @@
     font-size: 24px;
     border:none;
     background-color: #0000;
-    color:black;
+    color: #2C2C2C;
     text-transform: capitalize;
 }
 .aside__folder__container{
