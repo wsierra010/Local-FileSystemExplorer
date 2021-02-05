@@ -1,3 +1,5 @@
+import { removeContextMenu } from "../print/printContextMenu.js";
+
 export function addContextMenuListeners(){
 
     let isIn = false;
@@ -10,7 +12,7 @@ export function addContextMenuListeners(){
     $('.contextMenu').on('mouseleave', function(){
         if(isIn){
 
-            $('.contextMenu').remove();
+            removeContextMenu();
             //TO DO delete listeners
         }
     });

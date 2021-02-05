@@ -22,6 +22,11 @@
     height: 40px;
     box-shadow: inset 2px 2px 5px #0006;
     font-size: 20px;
+    cursor: pointer;
+    background-color: #EBEBEB;
+}
+.header_search__input:hover, .header_search__input:focus{
+    background-color: white;
 }
 .header_search__btn{
     background-color: #328444;
@@ -33,4 +38,8 @@
     font-size: 18px;
     box-shadow: 2px 2px 5px #0006;
 
+}
+.header_search__btn:hover, .header_search__btn:focus{
+    background-color: #227434;
+    box-shadow: 2px 2px 2px #0006;
 }

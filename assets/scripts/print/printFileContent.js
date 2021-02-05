@@ -4,20 +4,17 @@ import { printFoldersSidebar } from "./printFoldersSidebar.js";
 export const printFileContent = (data)=>{
     console.log(data);
 
-    
-    let dateCreation = new Date(data.created*1000)
-    let dateModification = new Date(data.modified*1000)
+    let dateCreation = new Date(data.created*1000);
+    let dateModification = new Date(data.modified*1000);
 
-    
 
-    let dateCreated = `${dateCreation.getDate()}/${dateCreation.getMonth()}/${dateCreation.getFullYear()}  ${dateCreation.getHours()}:${dateCreation.getMinutes()}`
+    let dateCreated = `${dateCreation.getDate()}/${dateCreation.getMonth()}/${dateCreation.getFullYear()}  ${dateCreation.getHours()}:${dateCreation.getMinutes()}`;
 
-    let dateModified = `${dateModification.getDate()}/${dateModification.getMonth()}/${dateModification.getFullYear()}  ${dateModification.getHours()}:${dateModification.getMinutes()}`
+    let dateModified = `${dateModification.getDate()}/${dateModification.getMonth()}/${dateModification.getFullYear()}  ${dateModification.getHours()}:${dateModification.getMinutes()}`;
 
-    
-    
+
     // conversion size
-    let size = ''
+    let size = '';
     if (data.size < 1024) {
         size = `${data.size} Bytes`
     }else if(data.size > 1024 && data.size < 1048576){
@@ -28,8 +25,8 @@ export const printFileContent = (data)=>{
         size = `${(((data.size/1024)/1024)/1024).toFixed(2)} GB`
     }else{
         size = 'Too big to calculate'
-    }
-   
+    };
+
 
     const hola = `
         <button id="closeSideInfo" class=" sidebarInfo__closeIcon">

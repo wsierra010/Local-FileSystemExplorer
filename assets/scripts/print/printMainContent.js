@@ -1,12 +1,13 @@
 import { createHtml } from "./createHtml.js";
 import { getIcon } from "./getIcon.js";
+import { printMainPath } from "./printMainPath.js";
 
 export const printMainContent = ( data, path )=> {
 
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');
     $gridContainer.innerHTML = '' ;
-    $gridContainer.innerHTML = `<div class='main__root'><button class="fas fa-chevron-left main__back__arrow"></button><span>${path}/</span><div>` ;
+    $gridContainer.innerHTML = printMainPath(path);
     // iterate folders and files
     data.forEach( e => {
 

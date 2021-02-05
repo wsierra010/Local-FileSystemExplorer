@@ -23,6 +23,18 @@
     color:#565656;
     margin-right: 0.5em;
 }
+.main__back__arrow:hover, .main__back__arrow:focus{
+    color: #2c2c2c;;
+}
+.main__root__button{
+    font-size: 24px;
+    background-color: #0000;
+    border:none;
+    color: #2C2C2C;
+}
+.main__root__button:focus, .main__root__button:hover{
+    text-decoration: underline;
+}
 .mainContent__element{
     text-align: center;
     height: auto;
@@ -37,11 +49,11 @@
 .mainContent_element__icon{
     color: #A5A5A5;
     font-size: 120px;
+    pointer-events: none;
 }
 .mainContent_element__title{
     width:80%;
     text-align: center;
-    margin-top: 1em;
     font-size: 20px;
     font-family: 'lato', sans-serif;
     font-weight: 500;
@@ -49,48 +61,50 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #2C2C2C;
+    pointer-events: none;
+    margin:1em auto;
 }
 
-.mainContent__element:hover>i{
+.mainContent__element:hover>i, .mainContent__element:focus>i{
     text-shadow: 1px 1px 3px #0006;
 }
 
-.txt:hover>i, .doc:hover>i{
+.txt:hover>i, .doc:hover>i, .txt:focus>i, .doc:focus>i{
     color:#4773E3;
 }
-.folder:hover>i{
+.folder:hover>i, .folder:focus>i{
     color:#F8CF66;
 }
-.png:hover>i, .jpg:hover>i{
+.png:hover>i, .jpg:hover>i, .png:focus>i, .jpg:focus>i{
     color:#328444;
 }
-.csv:hover>i{
+.csv:hover>i, .csv:focus>i{
     color:#328444;
 }
-.ppt:hover>i{
+.ppt:hover>i, .ppt:focus>i{
     color:#EE3030;
 }
-.odt:hover>i{
+.odt:hover>i, .odt:focus>i{
     color:#565656;
 }
-.pdf:hover>i{
+.pdf:hover>i, .pdf:focus>i{
     color:#EE3030;
 }
-.zip:hover>i{
+.zip:hover>i, .zip:focus>i{
     color:#F8CF66;
 }
-.rar:hover>i{
+.rar:hover>i, .rar:focus>i{
     color:#EE3030;
 }
-.exe:hover>i{
+.exe:hover>i, .exe:focus>i{
     color:#328444;
 }
-.svg:hover>i{
+.svg:hover>i, .svg:focus>i{
     color:#FC9D2D;
 }
-.mp3:hover>i{
+.mp3:hover>i, .mp3:focus>i{
     color:#3EB4E7;
 }
-.mp4:hover>i{
+.mp4:hover>i, .mp4:focus>i{
     color:#3EB4E7;
 }

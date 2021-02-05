@@ -3,17 +3,24 @@ import { printMainContent } from "../print/printMainContent.js";
 import { getFileInfo } from "../requests/getFileInfo.js";
 import { getFolders } from "../requests/getFolders.js";
 import { addContextMenuListeners } from "../listeners/contextMenulisteners.js";
+import { printContextMenu, removeContextMenuIfExist } from "../print/printContextMenu.js";
 
 export const mainContainerListeners = ()=>{
 
     //main container listeners
+
+    
 
     // identify container
     const $mainContent = document.querySelector( '.mainContent' );
 
     // add event listener double click
     $mainContent.addEventListener( 'dblclick' , (event)=>{
-        const targetData = event.target.parentNode.dataset;
+
+        //remove posible context menu
+        removeContextMenuIfExist();
+
+        const targetData = event.target.dataset;
 
             // identify type
             if ( targetData.type === 'folder') {
@@ -28,36 +35,21 @@ export const mainContainerListeners = ()=>{
     // add event listener single click
     $mainContent.addEventListener( 'click' , ( event ) => {
         
-        const targetData = event.target.parentNode.dataset;
-        if (event.target.parentNode.dataset.url) {          
-            getFileInfo( targetData.url , printFileContent )
-        }  
+        const targetData = event.target.dataset;
+
         
-    
+        if (targetData.url) {
+            console.log('aqui tb');
+            getFileInfo( targetData.url , printFileContent )
+        };
+
+
+        //remove posible context menu
+        removeContextMenuIfExist();
+
     });
 
     //add event listener right click
-    $mainContent.addEventListener('contextmenu', function(event) {
-        console.log(event.clientX);
-        let x=event.clientX;
-        let y=event.clientY;
-        console.log($('body').height());
-        if(y>$('body').height()-35*4){
-            y -= 35*4;
-        }
-        if(x>$('body').width()-200){
-            x -= 200;
-        }
-        const $contextMenu = $( `
-        <div class='contextMenu' style=' top: ${y}px; left: ${x}px '>
-            <button class='contextMenu__button'>Add directory</button>
-            <button class='contextMenu__button'>Add file</button>
-            <button class='contextMenu__button'>Folder info</button>
-            <button class='contextMenu__button'>Go back</button>
-        </div>` );
+    $mainContent.addEventListener('contextmenu', printContextMenu, false);
 
-        $('body').append($contextMenu);
-        addContextMenuListeners();
-        event.preventDefault();
-      }, false);
 }
