@@ -23,6 +23,18 @@
     color:#565656;
     margin-right: 0.5em;
 }
+.main__back__arrow:hover, .main__back__arrow:focus{
+    color: #2c2c2c;;
+}
+.main__root__button{
+    font-size: 24px;
+    background-color: #0000;
+    border:none;
+    color: #2C2C2C;
+}
+.main__root__button:focus, .main__root__button:hover{
+    text-decoration: underline;
+}
 .mainContent__element{
     text-align: center;
     height: auto;
