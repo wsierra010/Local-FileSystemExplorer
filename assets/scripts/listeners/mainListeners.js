@@ -5,7 +5,7 @@ import { getFolders } from "../requests/getFolders.js";
 
 
 export const mainContainerListeners = ()=>{
-    
+
     //main container listeners
 
     // identify container
@@ -28,13 +28,11 @@ export const mainContainerListeners = ()=>{
     // add event listener single click
     $mainContent.addEventListener( 'click' , ( event ) => {
         const targetData = event.target.parentNode.dataset;
-        console.log(targetData);
-        getFileInfo(targetData.url, printFileContent);
         // show modal
-        console.log( 'se va a mostrar el modal' );
-       
-    }); 
+        getFileInfo(targetData.url, printFileContent);
 
 
+    });
 
 }
+

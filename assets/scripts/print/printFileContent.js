@@ -32,4 +32,11 @@ export const printFileContent = (data)=>{
 
     document.getElementById('sidebar').innerHTML = hola;
     document.getElementById('sidebar').classList.add('sidebarInfo');
+    document.getElementById('closeSideInfo').addEventListener('click' , closeFileContent);
+}
+
+const closeFileContent = ()=>{
+    const sideBar = document.getElementById('sidebar');
+    document.getElementById('sidebar').classList.remove('sidebarInfo');
+   sideBar.innerHTML = '';
 }
