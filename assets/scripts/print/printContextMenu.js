@@ -36,8 +36,8 @@ function printGeneralContextMenu(event, actualFolderPath) {
 
     const $contextMenu = $( `
     <div class='contextMenu' style=' top: ${position.y}px; left: ${position.x}px '>
-        <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuCreateDirectory'>Add directory</button>
-        <button class='contextMenu__button' data-path='${actualFolderPath}' >Add file</button>
+        <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuCreateDirectory' >Add directory</button>
+        <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuAddFile' >Add file</button>
         <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 
@@ -56,9 +56,9 @@ function printFolderContextMenu(event, actualFolderPath) {
     <div class='contextMenu' style=' top: ${position.y}px; left: ${position.x}px '>
         <button class='contextMenu__button' data-path='${filePath}'>Directory info</button>
         <button class='contextMenu__button' data-path='${filePath}'>Open directory</button>
-        <button class='contextMenu__button' data-path='${filePath}'>Remove directory</button>
+        <button class='contextMenu__button' data-path='${filePath}' >Remove directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuCreateDirectory'>Add directory</button>
-        <button class='contextMenu__button' data-path='${actualFolderPath}'>Add file</button>
+        <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuAddFile'>Add file</button>
         <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 
@@ -78,7 +78,7 @@ function printFileContextMenu(event, actualFolderPath) {
         <button class='contextMenu__button' data-path='${filePath}'>File info</button>
         <button class='contextMenu__button' data-path='${filePath}'>Open file</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}'id='contextMenuCreateDirectory'>Add directory</button>
-        <button class='contextMenu__button' data-path='${actualFolderPath}'>Add file</button>
+        <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuAddFile' >Add file</button>
         <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
     </div>` );
 

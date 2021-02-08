@@ -38,16 +38,15 @@
     text-shadow: none;
 }
 
-.modal>label{
+.modal label{
     font-size: 18px;
     font-weight: 600;
     color: #2c2c2c;
 }
 
-.modal>input[type=text]{
+.modal input[type=text]{
     margin-top: 0.2em;
     margin-bottom: 1em;
-    font-size: 18px;
     border: none;
     border-radius: 5px;
     padding: 0.2em 0.4em;
@@ -57,10 +56,38 @@
     cursor: pointer;
     background-color: #EBEBEB;
 }
+.modal input[type=text]:disabled{
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 0.2em 0.4em;
+    color: #2C2C2C;
+    box-shadow: none;
+    font-size: 20px;
+    cursor:auto;
+    background-color: #0000;
+}
 
-.modal>input[type=text]:hover, .modal>input[type=text]:focus{
+.modal input[type=text]:hover, .modal input[type=text]:focus{
     background-color: white;
 }
+
+.modal input[type=file]{
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 0.2em 0.4em;
+    color: #2C2C2C;
+}
+
+.modal p{
+    margin: 0 2em;
+    font-size: 20px;
+}
+
 .modal__saveButton{
     background-color: #328444;
     color: white;
