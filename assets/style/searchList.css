@@ -1,0 +1,14 @@
+.searchList{
+    position: absolute;
+    background-color: white;
+    width: 290px;
+    right: 180px;
+    top: 80px;
+    max-width: 500px;
+    height: auto;
+    overflow-y: scroll;
+    text-align: left;
+}
+.searchList__ul{
+    text-align: left;
+}

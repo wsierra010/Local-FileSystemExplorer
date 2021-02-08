@@ -5,6 +5,7 @@
 @import url("./sidebarInfo.css");
 @import url("./contextMenu.css");
 @import url('./modal.css');
+@import url('./searchList.css');
 
 /* RESET */
 html, body, div, span, applet, object, iframe,
@@ -37,7 +38,7 @@ q:before, q:after {
 	content: none;
 }
 main{
-    display: flex;
+	display: flex;
 }
 
 button{
