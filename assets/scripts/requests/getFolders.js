@@ -1,4 +1,3 @@
-import { printFileContent } from "../print/printFileContent.js";
 import { printMainContent } from "../print/printMainContent.js";
 
 
@@ -13,7 +12,6 @@ export function getFolders( path, functionsToPrint){
             $( functionsToPrint ).each( ( i ,functionToPrint ) => {
                 if(functionToPrint===printMainContent) {
                     functionToPrint( result, path );
-                    console.log('aaa');
                 }
                 else {
                     functionToPrint( result );
