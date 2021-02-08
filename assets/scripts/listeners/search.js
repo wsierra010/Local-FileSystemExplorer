@@ -29,8 +29,7 @@ export const search = (data)=>{
                 array.push({
                     name: e.name,
                     path: e.path
-                 })
-               
+                 })   
             }
             if(e.name.match(isFolder)){
                 
@@ -47,13 +46,15 @@ const printSearchList = (array)=>{
     $container.innerHTML = ''
     array.forEach(e=>{
         const li = document.createElement('li')
+        li.classList.add('searchList__ul__li')
+        li.addEventListener('click',)
         if (e.name.includes('.')) {
             li.innerHTML = `
-                <button><i class="fas fa-file"></i> ${e.path} <br> ${e.name}</button>
+                <button data-url = "${e.path}"><i class="fas fa-file" style="color:grey"></i> ${e.name} <br> ${e.path}</button>
             `
         }else{
             li.innerHTML = `
-                <button><i class="fas fa-folder"></i> ${e.path} - ${e.name}</button>
+                <button><i class="fas fa-folder" style="color:grey"></i> ${e.name} <br> ${e.path}</button>
             `
         }
         $container.appendChild(li)
