@@ -4,7 +4,7 @@ export function printModal(content, callback = null, endCallback = null){
 
     const $modal=$(`
         <div class='modal__background'>
-        
+
             <div class='modal'>
                 <button class="far fa-times-circle modal__close"></button>
                 ${content}

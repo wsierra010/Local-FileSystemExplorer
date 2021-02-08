@@ -40,7 +40,7 @@ export const mainContainerListeners = ()=>{
 
         
         if (targetData.url) {
-            console.log('aqui tb');
+            // console.log('aqui tb');
             getFileInfo( targetData.url , printFileContent )
         };
 

@@ -4,6 +4,9 @@ import { getIcon } from "./getIcon.js";
 import { printMainPath } from "./printMainPath.js";
 
 export const printMainContent = ( data, path )=> {
+    console.log(data);
+    // console.log(path);
+
     // identify grid container
     const $gridContainer = document.querySelector('.mainContent');
     $gridContainer.innerHTML = '' ;
