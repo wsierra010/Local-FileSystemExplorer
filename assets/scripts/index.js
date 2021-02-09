@@ -5,6 +5,7 @@ import { addSidebarListeners } from "./listeners/sideBarListeners.js";
 import { printMainContent } from "./print/printMainContent.js";
 import { mainContainerListeners } from "./listeners/mainListeners.js";
 import { printModal } from "./print/printModal.js";
+import { addContextMenuListeners } from "./listeners/contextMenulisteners.js";
 
 $( document ).ready( function(){
     getFolders( 'root', [ printFoldersSidebar , printMainContent ] );
