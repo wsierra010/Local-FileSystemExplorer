@@ -9,8 +9,11 @@ export function getFolders( path, functionsToPrint){
         method:  'GET',
         data: 'path=' + path,
         success:  function ( response ) {
+            // console.log(response);
             let result = jQuery.parseJSON( response );
+            console.log(result);
             $( functionsToPrint ).each( ( i ,functionToPrint ) => {
+                console.log(functionToPrint);
                 if(functionToPrint===printMainContent) {
                     functionToPrint( result, path );
                     // console.log('aaa');
