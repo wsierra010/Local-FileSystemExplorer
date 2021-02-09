@@ -56,7 +56,7 @@ function printFolderContextMenu(event, actualFolderPath) {
     <div class='contextMenu' style=' top: ${position.y}px; left: ${position.x}px '>
         <button class='contextMenu__button' data-path='${filePath}' id='contextMenuOpenInfo'>Directory info</button>
         <button class='contextMenu__button' data-path='${filePath}' id='contextMenuOpenDirectory'>Open directory</button>
-        <button class='contextMenu__button' data-path='${filePath}' >Remove directory</button>
+        <button class='contextMenu__button' data-path='${filePath}' id="removeDirectory">Remove directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuCreateDirectory'>Add directory</button>
         <button class='contextMenu__button' data-path='${actualFolderPath}' id='contextMenuAddFile'>Add file</button>
         <button class='contextMenu__button' id='contextMenuGoBack' >Go back</button>
