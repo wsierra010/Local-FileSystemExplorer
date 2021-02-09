@@ -16,7 +16,6 @@ export function printModal(content, callback = null, endCallback = null){
 
     addModalListeners(endCallback);
 
-    console.log(callback);
     if(callback!=null){
         callback();
     }

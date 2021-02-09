@@ -1,4 +1,3 @@
-import { printFileContent } from "../print/printFileContent.js";
 import { printMainContent } from "../print/printMainContent.js";
 
 

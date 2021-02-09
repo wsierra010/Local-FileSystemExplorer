@@ -1,5 +1,6 @@
 
 export function printFoldersSidebar(data, i=null, $nodeToPrint=$(".aside")){
+    $nodeToPrint.innerHTML='';
     $.each(data, function( index, value ) {
         index++;
         if(i!=null){
