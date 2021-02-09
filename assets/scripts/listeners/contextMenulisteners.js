@@ -1,14 +1,10 @@
 import { back } from "../helpers/back.js";
 import { removeContextMenu } from "../print/printContextMenu.js";
 import { printCreateDirectoryModal } from "../print/printCreateDirectoryModal.js";
-<<<<<<< HEAD
 import { printFoldersSidebar } from "../print/printFoldersSidebar.js";
 import { printMainContent } from "../print/printMainContent.js";
 import { getFolders } from "../requests/getFolders.js";
 import { removeDirectory } from "../requests/removeDirectory.js";
-=======
-import { printUploadFileModal } from "../print/prinUploadFileModla.js";
->>>>>>> main
 
 export function addContextMenuListeners(){
 
