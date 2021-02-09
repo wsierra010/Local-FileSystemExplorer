@@ -21,7 +21,7 @@ export function addSidebarListeners(){
 });
 }
 function toggleShowContent( id ) {
-    
+
     if( $('#div-' + id).css( "display" )== 'none' ) {
         showContent( id );
     } else {
@@ -38,7 +38,7 @@ function showContent( id ) {
     $( arow ).removeClass( 'fa-chevron-right' );
     $( arow ).addClass( 'fa-chevron-down' );
 
-    
+
 }
 
 function hideContent( id ){

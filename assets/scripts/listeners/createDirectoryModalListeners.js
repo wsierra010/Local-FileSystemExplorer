@@ -1,4 +1,4 @@
-import { removeModal } from "../print/printModal.js";
+import { printModal, removeModal } from "../print/printModal.js";
 import { createDirectory } from "../requests/createDirectory.js";
 
 export function addCreateDirectoryModalListeners(){
@@ -6,10 +6,18 @@ export function addCreateDirectoryModalListeners(){
         if( $( event.target ).hasClass('modal__saveButton')){
             const name = $('#directoryName').val();
             const path = $( event.target ).data('path');
+            var OK = !name.includes('.') && name[0] !== '-' && name[0] !== '_' ;
+ 
+            if(OK){
+                createDirectory( path, name );
+                removeModal();
+                removeCreateDirectoryModalListeners();
+            }
+            else{
+                removeModal();
+                printModal('<p>Invalid directory name</p>');
+            }
 
-            createDirectory( path, name );
-            removeModal();
-            removeCreateDirectoryModalListeners();
         }
     });
 }
@@ -26,3 +34,4 @@ export function removeCreateDirectoryModalListeners(){
         }
     });
 }
+
