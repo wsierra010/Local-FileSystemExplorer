@@ -1,3 +1,4 @@
+import { printMainContent } from "../print/printMainContent.js";
 import { getFolders } from "../requests/getFolders.js";
 import { getFilesFolders } from "../requests/searchRequest.js";
 
@@ -10,7 +11,7 @@ export const searchListener = ()=>{
 let array = []
 
 const request = ()=>{
-    const path = document.querySelector('.main__root__button').dataset.path
+    const path = document.querySelector('.main__root').dataset.path
     array = []
     getFolders(path,[search]);
     
@@ -37,8 +38,12 @@ export const search = (data)=>{
                 search(e.content)
             }
         });
+        if (array.length === 0) {
+            $container.innerHTML = `No match in this folder : <b>${document.querySelector('.main__root').dataset.path}</b>`
+        }else{
+            printSearchList(array)
+        }
         
-        printSearchList(array)
     }
 }
 const $container = document.querySelector('.searchList__ul')
@@ -47,7 +52,11 @@ const printSearchList = (array)=>{
     array.forEach(e=>{
         const li = document.createElement('li')
         li.classList.add('searchList__ul__li')
-        li.addEventListener('click',)
+        li.addEventListener('click',()=>{
+            getFolders(e.path,[printMainContent])
+            $container.innerHTML = ''
+            document.querySelector('.header_search__input').value = ''
+        })
         if (e.name.includes('.')) {
             li.innerHTML = `
                 <button data-url = "${e.path}"><i class="fas fa-file" style="color:grey"></i> ${e.name} <br> ${e.path}</button>
