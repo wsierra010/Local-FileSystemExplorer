@@ -8,7 +8,6 @@ import { printUploadFileModal } from "../print/prinUploadFileModla.js";
 import { getFileInfo } from "../requests/getFileInfo.js";
 import { getFolders } from "../requests/getFolders.js";
 import { printFoldersSidebar } from "../print/printFoldersSidebar.js";
-import { getFolders } from "../requests/getFolders.js";
 import { removeDirectory } from "../requests/removeDirectory.js";
 
 export function addContextMenuListeners(){
@@ -53,8 +52,7 @@ export function addContextMenuListeners(){
         }else if( $(target).attr('id') == 'removeDirectory'){
             const path = $( target ).data('path');
             removeDirectory(path);
-            getFolders($('.main__root').data('path'),[printMainContent]);
-            getFolders('root',[printFoldersSidebar]);
+            
         }
 
         
