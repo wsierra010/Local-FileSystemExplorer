@@ -7,6 +7,7 @@ import { printContextMenu, removeContextMenuIfExist } from "../print/printContex
 import { mainPathListeners } from "./mainPathListeners.js";
 import { uploadFile } from "../requests/uploadFile.js";
 import { printUploadFileModal } from "../print/prinUploadFileModla.js";
+import { printModal } from "../print/printModal.js";
 
 
 
@@ -26,13 +27,13 @@ export const mainContainerListeners = ()=>{
         removeContextMenuIfExist();
 
         const targetData = event.target.dataset;
-
+        
             // identify type
             if ( targetData.type === 'folder') {
                 getFolders( targetData.url , [ printMainContent ] );
             }else{
-                //  TODO ----------------------------------------------------------------
-                // abrir archivok
+                // abrir archivo
+                showFileContent( event.target );
             }
     });
 
@@ -44,7 +45,6 @@ export const mainContainerListeners = ()=>{
 
         
         if (targetData.url) {
-            console.log('aqui tb');
             getFileInfo( targetData.url , printFileContent )
         };
 
@@ -81,6 +81,7 @@ const dragover = ( event ) => {
 const drop = (event ) => {
     event.stopPropagation();
     event.preventDefault();
+
     const target = event.target;
     let path=$('.main__root').data('path');
     if(target.classList.contains('folder')){
@@ -92,4 +93,34 @@ const drop = (event ) => {
     printUploadFileModal( path, files);
 
     dt.clearData();
+}
+
+
+const showFileContent = (target) =>{
+    const targetData = target.dataset;
+    const url = targetData.url;
+    let content;
+    if ( targetData.type == 'jpg' || targetData.type == 'png' ) {
+        content = `<img src="${url}">`;
+        printModal();
+
+    } else if ( targetData.type == 'mp3' ){
+        content = `<audio controls>
+                        <source src="${url}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>`;
+
+    } else if ( targetData.type == 'mp4' ){
+        content = `<video controls>
+                        <source src="${url}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+
+    } else {
+        content = '<p>Can\'t show this file.</p>';
+
+    }
+
+    printModal( content );
+
 }

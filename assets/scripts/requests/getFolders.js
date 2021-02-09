@@ -2,7 +2,6 @@ import { printMainContent } from "../print/printMainContent.js";
 
 
 export function getFolders( path, functionsToPrint){
-    
     $.ajax({
         url:   'api/getFolders.php',
         method:  'GET',

@@ -17,7 +17,8 @@ export function uploadFile( form_data ){
             data: form_data,
             success: function(response){
                 if( response == 'File is uploaded successfully.' ){
-                    getFolders( $('.main__root').data('path'), [ printFoldersSidebar , printMainContent ] );
+                    getFolders( $('.main__root').data('path'), [ printMainContent ] );
+                    getFolders( 'root', [ printFoldersSidebar ] );
                 }else{
                     printModal(`<p>${response}</p>`);
                 }

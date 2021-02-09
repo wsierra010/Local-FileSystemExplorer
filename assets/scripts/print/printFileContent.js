@@ -1,5 +1,4 @@
 import { getIcon } from "./getIcon.js";
-import { printFoldersSidebar } from "./printFoldersSidebar.js";
 
 export const printFileContent = (data)=>{
 
