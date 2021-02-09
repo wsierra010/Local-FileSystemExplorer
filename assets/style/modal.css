@@ -102,3 +102,7 @@
     background-color: #227434;
     box-shadow: 2px 2px 2px #0006;
 }
+
+.modal video{
+    width:70vw;
+}

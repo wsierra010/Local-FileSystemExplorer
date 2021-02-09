@@ -19,12 +19,8 @@ function deleteDirectory($dir){
 
     return rmdir($dir);
 }
-
-if(deleteDirectory($path)){
-    echo 'true';
-}else{
-    echo 'false';
-}
+$result = json_encode(deleteDirectory($path));
+echo $result;
 
 ?>
 

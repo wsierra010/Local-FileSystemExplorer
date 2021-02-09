@@ -8,9 +8,9 @@ export function createDirectory( path, name){
         method:  'GET',
         data: 'path=' + path + '/' + name,
         success:  function ( response ) {
-            console.log(response);
             if(response == 'true'){
-                getFolders( path, [ printFoldersSidebar , printMainContent ] );
+                getFolders( path, [ printMainContent ] );
+                getFolders( 'root', [ printFoldersSidebar ] );
             }else{
                 alert('Error creating directory');
             }
